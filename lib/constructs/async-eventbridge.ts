@@ -1,9 +1,9 @@
 import { Construct } from 'constructs';
-import { AwsIntegration, IRestApi, RestApi } from 'aws-cdk-lib/aws-apigateway';
-import { EventBus, IEventBus } from 'aws-cdk-lib/aws-events';
+import { AwsIntegration, IRestApi } from 'aws-cdk-lib/aws-apigateway';
+import { IEventBus } from 'aws-cdk-lib/aws-events';
 import { Role, ServicePrincipal } from 'aws-cdk-lib/aws-iam';
 
-interface AsyncEventBridgeApiProps {
+export interface AsyncEventBridgeApiProps {
   eventBus: IEventBus;
   api: IRestApi;
 }
